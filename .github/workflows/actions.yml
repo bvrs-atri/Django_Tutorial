@@ -27,7 +27,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run mysite tests
-        run: pwd
-
-      - name: Run polls tests
-        run: pwd
+        run: |
+          pwd
+          cd mysite
+          python manage.py test
+          
